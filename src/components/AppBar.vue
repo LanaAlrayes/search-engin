@@ -1,79 +1,56 @@
 <template>
   <v-app-bar
-    app
-    color="teal lighten-3"
+    fixed
+    color="teal lighten-4"
+    scroll-target="#scrolling-techniques-2"
+    prominent
+    height="20px"
   >
-    <v-spacer />
-    <div>
-      <v-toolbar-title
-        class="mt-1 blue-grey--text mr-4"
-        contain
-      >
-        Search Engine
-      </v-toolbar-title>
-    </div>
-    <v-spacer />
-
-    <v-row
-      justify="start"
-      no-gutters
+    <template
+      #extension
     >
-      <v-btn
-        color="white"
-        text
-        rounded
-        class="my-2 mx-2"
+      <v-app-bar-title class="blue-grey--text mx-16">
+        Search Engine
+      </v-app-bar-title>
+
+      <v-tabs
+        align-with-title
+        color="blue-grey"
+        class="hidden-sm-and-down"
       >
-        Home
+        <v-tab
+          :to="{name: 'Home'}"
+        >
+          Home
+        </v-tab>
+        <v-tab :to="{name: 'About'}">
+          About us
+        </v-tab>
+        <v-tab :to="{name: 'Team'}">
+          Team
+        </v-tab>
+        <v-tab :to="{name: 'companies'}">
+          companies
+        </v-tab>
+        <v-tab :to="{name: 'Contact'}">
+          Contact Us
+        </v-tab>
+      </v-tabs>
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
       </v-btn>
-      <v-btn
-        color="white"
-        text
-        rounded
-        class="my-2 mx-2"
-      >
-        About Us
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
       </v-btn>
-      <v-btn
-        color="white"
-        text
-        rounded
-        class="my-2 mx-2"
-      >
-        Team
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
-      <v-btn
-        color="white"
-        text
-        rounded
-        class="my-2 mx-2"
-      >
-        companies
-      </v-btn>
-      <v-btn
-        color="white"
-        text
-        rounded
-        class="my-2 mx-2"
-      >
-        Contact Us
-      </v-btn>
-    </v-row>
-    <v-text-field
-      v-model="search"
-      color="teal lighten-3"
-      class="rounded-pill"
-      solo-inverted
-      flat
-      hide-details
-      dark
-      append-icon="mdi-magnify"
-      label="Search News"
-    />
-    <v-spacer />
+      <v-spacer />
+    </template>
   </v-app-bar>
 </template>
-
 <script>
 
 export default {
@@ -83,3 +60,6 @@ export default {
   }),
 }
 </script>
+  <style>
+
+  </style>
