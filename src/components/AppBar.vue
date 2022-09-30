@@ -1,22 +1,26 @@
 <template>
   <v-app-bar
     fixed
-    color="teal lighten-4"
-    scroll-target="#scrolling-techniques-2"
+    outlined
+    dense
+    color="light-blue lighten-1"
     prominent
     height="20px"
+    scroll-target="#scrolling-techniques-7"
   >
     <template
       #extension
     >
-      <v-app-bar-title class="blue-grey--text mx-16">
-        Search Engine
-      </v-app-bar-title>
+      <v-div>
+        <v-toolbar-title class="black--text ml-16">
+          Search Engine
+        </v-toolbar-title>
+      </v-div>
 
       <v-tabs
         align-with-title
-        color="blue-grey"
-        class="hidden-sm-and-down"
+        color="white"
+        class="ml-10"
       >
         <v-tab
           :to="{name: 'Home'}"
@@ -29,30 +33,35 @@
         <v-tab :to="{name: 'Team'}">
           Team
         </v-tab>
-        <v-tab :to="{name: 'companies'}">
+        <v-tab :to="{name: 'Companies'}">
           companies
         </v-tab>
         <v-tab :to="{name: 'Contact'}">
           Contact Us
         </v-tab>
       </v-tabs>
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
 
       <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+        <v-icon color="white">
+          mdi-magnify
+        </v-icon>
       </v-btn>
-
       <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
+        <v-icon color="white">
+          mdi-heart
+        </v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon color="white">
+          mdi-dots-vertical
+        </v-icon>
       </v-btn>
       <v-spacer />
     </template>
   </v-app-bar>
 </template>
-<script>
 
+<script>
 export default {
   name: 'App',
   data: () => ({
@@ -60,6 +69,3 @@ export default {
   }),
 }
 </script>
-  <style>
-
-  </style>
