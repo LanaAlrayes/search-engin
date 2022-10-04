@@ -1,9 +1,9 @@
 <template>
   <div>
     <hero />
-    <different-h />
+    <different-v />
+    <company-v />
     <our-medicines />
-    <as-d />
     <our-team />
     <client-testimonials />
   </div>
@@ -11,10 +11,10 @@
 
 <script>
 import Hero from '../components/Hero'
+import DifferentV from '@/components/DifferentV.vue'
+import CompanyV from '@/components/CompanyV.vue'
 import OurMedicines from '@/components/OurMedicines.vue'
 import OurTeam from '../components/OurTeam.vue'
-import DifferentH from '@/components/DifferentH.vue'
-import AsD from '@/components/AsD.vue'
 import ClientTestimonials from '@/components/ClientTestimonials.vue'
 
 export default {
@@ -22,10 +22,10 @@ export default {
 
   components: {
     Hero,
+    DifferentV,
+    CompanyV,
     OurMedicines,
     OurTeam,
-    DifferentH,
-    AsD,
     ClientTestimonials,
   },
 }
