@@ -3,17 +3,17 @@
     id="client"
   >
     <v-row
-      class="my-12"
+      class="my-16"
       justify="center"
     >
       <v-col cols="12">
         <div
-          class="text-h6 text-center my-5 blue-grey--text"
+          class="text-h6 text-center my-5 grey--text"
         >
           Client Testimonials
         </div>
         <div
-          class="text-h3 text-center my-5 blue-grey--text"
+          class="text-h3 text-center my-5"
         >
           What Our Clients Say
         </div>
@@ -29,29 +29,27 @@
               :elevation="hover ? 12 : 2"
               :class="{ 'on-hover': hover }"
             >
-              <v-card-title class="text-h6 white--text">
-                <v-row
-                  class="fill-height flex-column"
-                  justify="space-between"
+              <v-card-title
+                class="text-h6 white--text fill-height flex-column"
+                justify="space-between"
+              >
+                <v-avatar
+                  size="120"
                 >
-                  <v-avatar
-                    size="100"
+                  <img
+                    alt="user"
+                    :src=" item.img"
                   >
-                    <img
-                      alt="user"
-                      :src=" item.img"
-                    >
-                  </v-avatar>
-                  <p class="ma-0 black--text text-body-1 font-weight-bold font-italic">
-                    {{ item.title }}
-                  </p>
-                  <p class="text-caption black--text font-weight-medium font-italic">
-                    {{ item.text }}
-                  </p>
-                </v-row>
+                </v-avatar>
+                <p class="ma-2 black--text text-body-1 font-weight-bold">
+                  {{ item.title }}
+                </p>
+                <p class="text-caption blue--text font-weight-medium">
+                  {{ item.text }}
+                </p>
               </v-card-title>
               <v-card-title>
-                <p class="mt-4 subheading text-left">
+                <p class="subheading text-left">
                   {{ item.subtext }}
                 </p>
               </v-card-title>

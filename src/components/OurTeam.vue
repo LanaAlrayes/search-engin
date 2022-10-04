@@ -1,19 +1,17 @@
 <template>
   <v-container id="ourTeam">
     <v-row
-      class="my-12"
+      class="my-16"
       justify="center"
     >
       <v-col cols="12">
         <div
-          v-vue-aos="{animationClass:'animate__fadeInRight animate__animated'}"
-          class="text-h6 text-center my-5 blue-grey--text"
+          class="text-h6 text-center my-5 grey--text"
         >
           Meet Our Team
         </div>
         <div
-          v-vue-aos="{animationClass:'animate__fadeInRight animate__animated'}"
-          class="text-h3 text-center my-5 blue-grey--text"
+          class="text-h3 text-center my-5"
         >
           Our Creative Team
         </div>
@@ -21,7 +19,6 @@
       <v-col
         v-for="(member,i) in team"
         :key="i"
-        v-vue-aos="{animationClass:'animate__fadeInLeft animate__animated'}"
         class="text-center justify-center"
         cols="12"
         md="3"
@@ -40,12 +37,12 @@
               >
             </v-avatar>
             <v-card
-              class=" mx-auto text-center justify-center grey lighten-4"
+              class="mx-auto text-center justify-center grey lighten-4"
             >
-              <v-card-title class=" justify-center pt-5">
+              <v-card-title class="justify-center pt-5">
                 {{ member.name }}
               </v-card-title>
-              <v-card-subtitle class="teal--text text--darken-1">
+              <v-card-subtitle class="blue--text text--darken-1">
                 {{ member.job_title }}
               </v-card-subtitle>
               <v-card-text>
@@ -86,10 +83,6 @@ export default {
 }
 </script>
 <style scoped>
-.text-h3{
-  font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    letter-spacing: .05em;
-}
 .border{
     position: relative;
     content: '';
@@ -97,7 +90,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    border: 4px solid rgb(20, 183, 183) !important;
+    border: 4px solid rgb(36, 136, 198) !important;
     transform: translatey(-14px);
     transition: all .3s ease-in-out;
 }

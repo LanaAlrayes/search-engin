@@ -3,7 +3,7 @@
     id="different"
   >
     <div
-      class="text-h3 mt-16 mb-8 black--text"
+      class="text-h3 my-16 black--text"
     >
       What Makes Us Different
     </div>
@@ -79,7 +79,7 @@
 
 <style scoped>
 .v-avatar{
-    border: 2px solid #EEEEEE;
+    border: 3px solid #EEEEEE;
         top: 24px;
         z-index: 1;
 }
