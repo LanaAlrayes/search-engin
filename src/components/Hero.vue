@@ -1,16 +1,15 @@
 <template>
   <v-parallax
     id="home"
-    class="my-16"
-    height="700"
-    src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+    class="mt-16 mb-0"
+
+    src="https://livedemo00.template-help.com/wt_prod-20844/images/breadcrumbs-bg.jpg"
   >
     <v-container>
       <v-text-field
         append-icon="mdi-microphone"
         hide-details
         dark
-
         label="Search"
         prepend-inner-icon="mdi-magnify"
         solo-inverted
@@ -26,9 +25,3 @@ export default {
   }),
 }
 </script>
-<style scoped>
-.div{
-  width: 50px !important;
-  height: 600px;
-}
-</style>
