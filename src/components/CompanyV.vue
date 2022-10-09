@@ -1,5 +1,6 @@
 <template>
   <v-carousel
+    id="company"
     cycle
     height="500"
     hide-delimiter-background
@@ -9,22 +10,7 @@
       v-for="(item, i) in items"
       :key="i"
       :src="item.src"
-    >
-      <!-- <v-sheet
-        :items="items[i]"
-        height="100%"
-      >
-        <v-row
-          class="fill-height"
-          align="center"
-          justify="center"
-        >
-          <div class="text-h2">
-            {{ slide }} Slide
-          </div>
-        </v-row>
-      </v-sheet> -->
-    </v-carousel-item>
+    />
   </v-carousel>
 </template>
 
@@ -42,13 +28,6 @@ export default {
         {
           src: 'https://ld-wt73.template-help.com/wt_prod-20176/images/background-breadcrumbs-01-1920x345.jpg',
         },
-      ],
-      slides: [
-        'First',
-        'Second',
-        'Third',
-        'Fourth',
-        'Fifth',
       ],
     }
   },
