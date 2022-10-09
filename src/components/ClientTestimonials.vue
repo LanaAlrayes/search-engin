@@ -41,11 +41,8 @@
                     :src=" item.img"
                   >
                 </v-avatar>
-                <p class="ma-2 black--text text-body-1 font-weight-bold">
+                <p class="mt-4 blue--text text-body-1">
                   {{ item.title }}
-                </p>
-                <p class="text-caption blue--text font-weight-medium">
-                  {{ item.text }}
                 </p>
               </v-card-title>
               <v-card-title>
@@ -66,22 +63,19 @@ export default {
   data: () => ({
     items: [
       {
-        title: 'New Releases',
-        text: 'It\'s New Release Friday',
+        title: 'Betty Wade',
         subtext: '"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.Lorem ipsum dolor sit amet consectetur adipisicing elit."',
-        img: 'https://images.unsplash.com/photo-1429514513361-8fa32282fd5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3264&q=80',
+        img: 'https://slidesigma.nyc/templatemonster/react/findpharma/assets/img/doctors-grid/348x350-1.jpg',
       },
       {
-        title: 'Rock',
-        text: 'Greatest Rock Hits',
+        title: 'Matthew Reyes',
         subtext: '"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.Lorem ipsum dolor sit amet consectetur adipisicing elit."',
-        img: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
+        img: 'https://slidesigma.nyc/templatemonster/react/findpharma/assets/img/doctors-grid/348x350-0.jpg',
       },
       {
-        title: 'Mellow Moods',
-        text: 'Ambient Bass',
+        title: 'Bryan Green',
         subtext: '"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.Lorem ipsum dolor sit amet consectetur adipisicing elit."',
-        img: 'https://images.unsplash.com/photo-1542320868-f4d80389e1c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80',
+        img: 'https://ld-wt73.template-help.com/wt_prod-20176/images/our-team-07-384x410.jpg',
       },
     ],
     transparent: 'rgba(255, 255, 255, 0)',

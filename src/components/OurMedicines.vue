@@ -22,7 +22,7 @@
         <v-tab>All</v-tab>
         <v-tab>Pills</v-tab>
         <v-tab>Cream</v-tab>
-        <v-tab>Drink</v-tab>
+        <v-tab>Syrups</v-tab>
         <v-tab-item>
           <v-row
             class="flex"
@@ -70,7 +70,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUV9kl0862VrRTpzIEh3yqiyvIl4uKoOhitw&usqp=CAU"
+                  src="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-2-229x170.jpg"
                   aspect-ratio="1"
                   class="grey lighten-2 "
                   :class="{'scale': hover}"
@@ -89,7 +89,7 @@
                         <v-btn
                           target="_blank"
                           icon
-                          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUV9kl0862VrRTpzIEh3yqiyvIl4uKoOhitw&usqp=CAU"
+                          href="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-2-229x170.jpg"
                         >
                           <v-icon>mdi-magnify-plus-outline</v-icon>
                         </v-btn><br>
@@ -423,7 +423,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUV9kl0862VrRTpzIEh3yqiyvIl4uKoOhitw&usqp=CAU"
+                  src="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-2-229x170.jpg"
                   aspect-ratio="1"
                   class="grey lighten-2"
                   :class="{'scale': hover}"
@@ -442,7 +442,7 @@
                         <v-btn
                           target="_blank"
                           icon
-                          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUV9kl0862VrRTpzIEh3yqiyvIl4uKoOhitw&usqp=CAU"
+                          href="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-2-229x170.jpg"
                         >
                           <v-icon>mdi-magnify-plus-outline</v-icon>
                         </v-btn><br>

@@ -20,7 +20,7 @@
       <v-tabs
         align-with-title
         color="white"
-        class="ml-10"
+        class="ml-10 text-h5"
       >
         <v-tab
           :to="{name: 'Home'}"

@@ -21,10 +21,11 @@
           </v-icon>
         </v-avatar>
         <v-card-text class="mt-5">
-          <p class="text-h4 text--primary">
-            Origin
+          <p class="text-h5 text--primary">
+            Credibility
           </p>
           <p class="text-subtitle-1 grey--text">
+            We help to get the best medicine
             We help to get the best medicine
           </p>
         </v-card-text>
@@ -39,14 +40,15 @@
             large
             color="light-blue darken-1"
           >
-            mdi-seal-variant
+            mdi-checkbox-marked-circle
           </v-icon>
         </v-avatar>
         <v-card-text class="mt-5">
-          <p class="text-h4 text--primary">
-            Origin
+          <p class="text-h5 text--primary">
+            Guarantee
           </p>
           <p class="text-subtitle-1 grey--text">
+            We Provide Essential Service For Your Health
             We Provide Essential Service For Your Health
           </p>
         </v-card-text>
@@ -65,10 +67,11 @@
           </v-icon>
         </v-avatar>
         <v-card-text class="mt-5">
-          <p class="text-h4 text--primary">
+          <p class="text-h5 text--primary">
             Origin
           </p>
           <p class="text-subtitle-1 grey--text">
+            We Provide Essential Service For Your Health
             We Provide Essential Service For Your Health
           </p>
         </v-card-text>

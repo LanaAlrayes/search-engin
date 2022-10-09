@@ -19,7 +19,7 @@
       <v-col
         v-for="(member,i) in team"
         :key="i"
-        class="text-center justify-center"
+        class="text-center justify-center ml-10"
         cols="12"
         md="3"
         sm="4"
@@ -68,11 +68,11 @@ export default {
         },
         {
           name: 'Ammar Khadaj',
-          job_title: 'Back End',
+          job_title: 'Data Bases',
           img: 'Lana.jpg',
         },
         {
-          name: 'Reem',
+          name: 'Reem Aboras',
           job_title: 'Back End',
           img: 'Lana.jpg',
         },
