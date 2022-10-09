@@ -1,47 +1,60 @@
 <template>
   <v-carousel
-    id="company"
     cycle
-    height="400"
+    height="500"
     hide-delimiter-background
     show-arrows-on-hover
-    class="my-16"
   >
     <v-carousel-item
-      v-for="(slide, i) in slides"
+      v-for="(item, i) in items"
       :key="i"
+      :src="item.src"
     >
-      <v-img
-        src="https://sigmadigitalpartners.com/themes/templatemonster/html/pharmia/assets/images/about/3.jpg"
+      <!-- <v-sheet
+        :items="items[i]"
+        height="100%"
       >
         <v-row
           class="fill-height"
           align="center"
           justify="center"
         >
-          <v-btn class="text-h6 ">
+          <div class="text-h2">
             {{ slide }} Slide
-          </v-btn>
+          </div>
         </v-row>
-      </v-img>
+      </v-sheet> -->
     </v-carousel-item>
   </v-carousel>
 </template>
+
 <script>
 export default {
   data () {
     return {
-      colors: [
-        'indigo',
-        'warning',
-        'pink darken-2',
+      items: [
+        {
+          src: 'https://livedemo00.template-help.com/wt_prod-20844/images/project-3-671x214.jpg',
+        },
+        {
+          src: 'https://livedemo00.template-help.com/wt_prod-20844/images/project-1-671x214.jpg',
+        },
+        {
+          src: 'https://ld-wt73.template-help.com/wt_prod-20176/images/background-breadcrumbs-01-1920x345.jpg',
+        },
       ],
       slides: [
         'First',
         'Second',
         'Third',
+        'Fourth',
+        'Fifth',
       ],
     }
   },
 }
 </script>
+<!-- src="" -->
+
+  <!--  src=""
+-->
