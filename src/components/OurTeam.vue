@@ -6,6 +6,7 @@
     >
       <v-col cols="12">
         <div
+          v-vue-aos="{animationClass:'animate__backInLeft animate__animated'}"
           class="text-h6 text-center my-5 grey--text"
         >
           Meet Our Team
@@ -17,7 +18,7 @@
         </div>
       </v-col>
       <v-col
-        v-for="(member,i) in team"
+        v-for="(teams,i) in team"
         :key="i"
         class="text-center justify-center ml-10"
         cols="12"
@@ -32,7 +33,7 @@
             >
               <img
                 alt="user"
-                :src="require(`../assets/${member.img}`)"
+                :src="require(`../assets/${teams.img}`)"
                 class="d-flex justify-center"
               >
             </v-avatar>
@@ -40,10 +41,10 @@
               class="mx-auto text-center justify-center grey lighten-4"
             >
               <v-card-title class="justify-center pt-5">
-                {{ member.name }}
+                {{ teams.name }}
               </v-card-title>
               <v-card-subtitle class="blue--text text--darken-1">
-                {{ member.job_title }}
+                {{ teams.job_title }}
               </v-card-subtitle>
               <v-card-text>
                 Syrian Virtual University
@@ -69,7 +70,7 @@ export default {
         {
           name: 'Ammar Khadaj',
           job_title: 'Data Bases',
-          img: 'Lana.jpg',
+          img: 'Amar.jpg',
         },
         {
           name: 'Reem Aboras',
