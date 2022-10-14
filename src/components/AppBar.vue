@@ -41,9 +41,15 @@
         </v-tab>
       </v-tabs>
 
-      <v-btn icon>
-        <v-icon color="white">
-          mdi-magnify
+      <v-btn
+        icon
+        @click="$vuetify.theme.dark=!$vuetify.theme.dark"
+      >
+        <v-icon v-if="!$vuetify.theme.dark">
+          mdi-weather-night
+        </v-icon>
+        <v-icon v-else>
+          mdi-white-balance-sunny
         </v-icon>
       </v-btn>
       <v-btn icon>
@@ -65,7 +71,9 @@
 export default {
   name: 'App',
   data: () => ({
-    //
+    return: {
+      show: false,
+    },
   }),
 }
 </script>
