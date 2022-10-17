@@ -3,7 +3,7 @@
     id="different"
   >
     <div
-      class="text-h3 my-16 black--text"
+      class="text-h3 my-16"
     >
       What Makes Us Different
     </div>

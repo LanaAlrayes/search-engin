@@ -1,7 +1,6 @@
 <template>
   <v-app-bar
     fixed
-    outlined
     dense
     color="light-blue lighten-1"
     prominent
@@ -40,29 +39,29 @@
           Contact Us
         </v-tab>
       </v-tabs>
-
-      <v-btn
-        icon
-        @click="$vuetify.theme.dark=!$vuetify.theme.dark"
-      >
-        <v-icon v-if="!$vuetify.theme.dark">
-          mdi-weather-night
-        </v-icon>
-        <v-icon v-else>
-          mdi-white-balance-sunny
-        </v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>
-          mdi-heart
-        </v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>
-          mdi-dots-vertical
-        </v-icon>
-      </v-btn>
-      <v-spacer />
+      <div class="d-flex flex-row mr-16">
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          class="hidden-sm-and-down"
+          icon
+        >
+          <v-icon size="20px">
+            {{ icon }}
+          </v-icon>
+        </v-btn>
+        <v-btn
+          icon
+          @click="$vuetify.theme.dark=!$vuetify.theme.dark"
+        >
+          <v-icon v-if="!$vuetify.theme.dark">
+            mdi-weather-night
+          </v-icon>
+          <v-icon v-else>
+            mdi-white-balance-sunny
+          </v-icon>
+        </v-btn>
+      </div>
     </template>
   </v-app-bar>
 </template>
@@ -71,9 +70,10 @@
 export default {
   name: 'App',
   data: () => ({
-    return: {
-      show: false,
-    },
+    icons: [
+      'mdi-facebook',
+      'mdi-twitter',
+    ],
   }),
 }
 </script>

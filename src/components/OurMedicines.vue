@@ -10,7 +10,7 @@
           trending
         </div>
         <div
-          class="text-h3 text-center my-5 black--text"
+          class="text-h3 text-center my-5"
         >
           The Counter Medicine
         </div>
