@@ -8,52 +8,56 @@
     >
       <v-col cols="12">
         <div
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
           class="text-h6 text-center my-5 grey--text"
         >
           Client Testimonials
         </div>
         <div
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
           class="text-h3 text-center my-5"
         >
           What Our Clients Say
         </div>
       </v-col>
-      <template v-for="(item, i) in items">
-        <v-col
-          :key="i"
-          cols="12"
-          md="4"
-        >
-          <v-hover v-slot="{ hover }">
-            <v-card
-              :elevation="hover ? 12 : 2"
-              :class="{ 'on-hover': hover }"
+
+      <v-col
+        v-for="(item, i) in items"
+        :key="i"
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+        cols="12"
+        md="4"
+      >
+        <v-hover v-slot="{ hover }">
+          <v-card
+            :elevation="hover ? 12 : 2"
+            :class="{ 'on-hover': hover }"
+          >
+            <v-card-title
+              class="text-h6 white--text fill-height flex-column"
+              justify="space-between"
             >
-              <v-card-title
-                class="text-h6 white--text fill-height flex-column"
-                justify="space-between"
+              <v-avatar
+                :class="{'border': hover}"
+                size="120"
               >
-                <v-avatar
-                  size="120"
+                <img
+                  alt="user"
+                  :src=" item.img"
                 >
-                  <img
-                    alt="user"
-                    :src=" item.img"
-                  >
-                </v-avatar>
-                <p class="mt-4 blue--text text-body-1">
-                  {{ item.title }}
-                </p>
-              </v-card-title>
-              <v-card-title>
-                <p class="subheading text-left">
-                  {{ item.subtext }}
-                </p>
-              </v-card-title>
-            </v-card>
-          </v-hover>
-        </v-col>
-      </template>
+              </v-avatar>
+              <p class="mt-4 blue--text text-body-1">
+                {{ item.title }}
+              </p>
+            </v-card-title>
+            <v-card-title>
+              <p class="subheading text-left">
+                {{ item.subtext }}
+              </p>
+            </v-card-title>
+          </v-card>
+        </v-hover>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -89,4 +93,16 @@ export default {
   .show-btns {
     color: rgba(255, 255, 255, 1) !important;
   }
+  .border{
+    position: relative;
+    content: '';
+    top: 24px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 4px solid rgb(36, 136, 198) !important;
+    transform: translatey(-14px);
+    transition: all .3s ease-in-out;
+}
+
   </style>

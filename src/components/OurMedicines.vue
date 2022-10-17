@@ -5,11 +5,13 @@
     <v-row class="my-16">
       <v-col cols="12">
         <div
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
           class="text-h6 text-center my-5 grey--text"
         >
           trending
         </div>
         <div
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
           class="text-h3 text-center my-5"
         >
           The Counter Medicine
@@ -35,6 +37,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInDown'}"
                   :class="{'scale': hover}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkC5k7cwtkaDk0QLyy6EiliNYr0RK0BiJQlw&usqp=CAU"
                   aspect-ratio="1"
@@ -70,6 +73,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInUp'}"
                   src="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-2-229x170.jpg"
                   aspect-ratio="1"
                   class="grey lighten-2 "
@@ -105,6 +109,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInRight'}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAAuDBdCvgHq6E4mKQeI5VtualnTCEm6LMA&usqp=CAU"
                   aspect-ratio="1"
                   class="grey lighten-2 "
@@ -143,6 +148,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInLeft'}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1cyI_Fzg69cFvbJKxh38qLJUzKrROycgdXA&usqp=CAU"
                   aspect-ratio="1"
                   class="grey lighten-2"
@@ -183,6 +189,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInUp'}"
                   :class="{'scale': hover}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyegj3D8iAirRA_iSuC14IuXT8X2eJOce1-Q&usqp=CAU"
                   aspect-ratio="1"
@@ -221,6 +228,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInRight'}"
                   src="https://sigmadigitalpartners.com/themes/templatemonster/html/pharmia/assets/images/about/3.jpg"
                   aspect-ratio="1"
                   class="grey lighten-2"
@@ -264,6 +272,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInUp'}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAAuDBdCvgHq6E4mKQeI5VtualnTCEm6LMA&usqp=CAU"
                   aspect-ratio="1"
                   class="grey lighten-2 "
@@ -300,6 +309,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInRight'}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1cyI_Fzg69cFvbJKxh38qLJUzKrROycgdXA&usqp=CAU"
                   aspect-ratio="1"
                   class="grey lighten-2"
@@ -343,6 +353,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInRight'}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkC5k7cwtkaDk0QLyy6EiliNYr0RK0BiJQlw&usqp=CAU"
                   aspect-ratio="1"
                   class="grey lighten-2 "
@@ -378,6 +389,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInRight'}"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyegj3D8iAirRA_iSuC14IuXT8X2eJOce1-Q&usqp=CAU"
                   aspect-ratio="1"
                   class="grey lighten-2"
@@ -423,6 +435,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__slideInUp'}"
                   src="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-2-229x170.jpg"
                   aspect-ratio="1"
                   class="grey lighten-2"
@@ -458,6 +471,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-img
+                  v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
                   src="https://sigmadigitalpartners.com/themes/templatemonster/html/pharmia/assets/images/about/3.jpg"
                   aspect-ratio="1"
                   class="grey lighten-2"

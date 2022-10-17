@@ -3,12 +3,14 @@
     id="different"
   >
     <div
+      v-vue-aos="{animationClass:'animate__animated animate__fadeInUp'}"
       class="text-h3 my-16"
     >
       What Makes Us Different
     </div>
     <v-row class="mb-10">
       <v-col
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
         cols="6"
         sm="4"
       >
@@ -32,6 +34,7 @@
       </v-col>
 
       <v-col
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
         cols="6"
         sm="4"
       >
@@ -55,6 +58,7 @@
       </v-col>
 
       <v-col
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
         cols="6"
         sm="4"
       >

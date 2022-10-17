@@ -17,6 +17,7 @@
           class="pa-0"
         >
           <v-list
+            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
             class="light-blue lighten-1"
           >
             <v-subheader class="text-uppercase font-weight-bold text-h6">
@@ -78,6 +79,7 @@
           class="pa-0"
         >
           <v-list
+            v-vue-aos="{animationClass:'animate__animated animate__fadeInUp'}"
             class="light-blue lighten-1"
           >
             <v-subheader class="text-uppercase font-weight-bold text-h6">
@@ -104,6 +106,7 @@
           class="pa-0"
         >
           <v-list
+            v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
             class="light-blue lighten-1"
           >
             <v-subheader class="text-uppercase font-weight-bold text-h6">

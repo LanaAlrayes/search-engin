@@ -6,12 +6,13 @@
     >
       <v-col cols="12">
         <div
-          v-vue-aos="{animationClass:'animate__backInLeft animate__animated'}"
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
           class="text-h6 text-center my-5 grey--text"
         >
           Meet Our Team
         </div>
         <div
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
           class="text-h3 text-center my-5"
         >
           Our Creative Team
@@ -20,6 +21,7 @@
       <v-col
         v-for="(teams,i) in team"
         :key="i"
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
         class="text-center justify-center ml-10"
         cols="12"
         md="3"
@@ -38,8 +40,9 @@
               >
             </v-avatar>
             <v-card
-              class="mx-auto text-center justify-center grey lighten-4"
+              class="mx-auto text-center justify-center"
             >
+              <!-- grey lighten-4 -->
               <v-card-title class="justify-center pt-5">
                 {{ teams.name }}
               </v-card-title>
