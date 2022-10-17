@@ -10,10 +10,16 @@
     <template
       #extension
     >
-      <v-div>
-        <v-toolbar-title class="black--text ml-16">
+      <v-div class="d-flex flex-row">
+        <v-toolbar-title class="black--text ml-16 mr-3">
           Search Engine
         </v-toolbar-title>
+        <v-img
+          src="http://homework.webmyidea.com/assets/images/logo.png"
+          width="30"
+          height="30"
+          class="mt-1"
+        />
       </v-div>
 
       <v-tabs
