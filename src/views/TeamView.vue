@@ -24,6 +24,7 @@
     <v-container>
       <v-row>
         <v-col
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
           cols="12"
           class="text-center"
         >
@@ -46,7 +47,10 @@
           <template #opposite>
             <span>{{ image.section }}</span>
           </template>
-          <v-card class="elevation-2">
+          <v-card
+            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+            class="elevation-2"
+          >
             <v-card-title class="text-h5">
               {{ image.title }}
             </v-card-title>
@@ -62,7 +66,10 @@
         class="text-right d-flex justify-center"
       >"This is the end of the university but it's a new beginning for a new journey.
         Thank you"</span> <br>
-      <h2 class="text-right d-flex justify-center">
+      <h2
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
+        class="text-right d-flex justify-center"
+      >
         About The Project
       </h2>
     </v-container>
@@ -74,13 +81,18 @@
         >
           <v-hover>
             <template #default="{ hover }">
-              <v-img
-                src="https://serv5.com/wp-content/uploads/2021/09/%D8%B4%D8%B1%D9%83%D8%A9-%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-3.jpg"
+              <v-card
                 height="230"
                 width="500"
-                :class="{'scale': hover}"
-                class="mx-auto pa-6"
-              />
+                :elevation="hover ? 12 : 2"
+              >
+                <v-img
+                  src="https://serv5.com/wp-content/uploads/2021/09/%D8%B4%D8%B1%D9%83%D8%A9-%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-3.jpg"
+                  height="230"
+                  width="500"
+                  class="mx-auto pa-1"
+                />
+              </v-card>
             </template>
           </v-hover>
         </v-col>
@@ -100,7 +112,10 @@
                 </v-card-title>
                 <div class="text--primary">
                   <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.</li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iure at dignissimos ad, numquam animi reprehenderit quasi! Corrupti, quibusdam vel? Veritatis adipisci
+                    </li>
                   </ul>
                 </div>
               </v-card>
@@ -119,7 +134,7 @@ export default {
       {
         img: 'Dr.Mohmmad.jpg',
         section: 'first section',
-        title: 'Dr Mohammad Hajjouz',
+        title: 'Dr.Mohammad Hajjouz',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.',
       },
       {
@@ -156,8 +171,5 @@ span{
 #description{
   font-size: 20px;
 }
-.scale .v-image{
-  transform: scale(1.2);
-  transition: transform 1s;
-}
+
 </style>
