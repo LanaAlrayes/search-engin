@@ -1,65 +1,70 @@
 <template>
-  <v-container
-    id="client"
+  <v-parallax
+    height="100%"
+    src="https://demo.themexbd.com/rtl/smartdev/wp-content/uploads/2021/06/blog-shape.png"
   >
-    <v-row
-      class="my-16"
-      justify="center"
+    <v-container
+      id="client"
     >
-      <v-col cols="12">
-        <div
-          v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
-          class="text-h6 text-center my-5 grey--text"
-        >
-          Client Testimonials
-        </div>
-        <div
-          v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-          class="text-h3 text-center my-5"
-        >
-          What Our Clients Say
-        </div>
-      </v-col>
-
-      <v-col
-        v-for="(item, i) in items"
-        :key="i"
-        v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
-        cols="12"
-        md="4"
+      <v-row
+        class="my-16"
+        justify="center"
       >
-        <v-hover v-slot="{ hover }">
-          <v-card
-            :elevation="hover ? 12 : 2"
-            :class="{ 'on-hover': hover }"
+        <v-col cols="12">
+          <div
+            v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
+            class="text-h6 text-center my-5 grey--text"
           >
-            <v-card-title
-              class="text-h6 white--text fill-height flex-column"
-              justify="space-between"
+            Client Testimonials
+          </div>
+          <div
+            v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+            class="text-h3 text-center my-5 text--primary"
+          >
+            What Our Clients Say
+          </div>
+        </v-col>
+
+        <v-col
+          v-for="(item, i) in items"
+          :key="i"
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+          cols="12"
+          md="4"
+        >
+          <v-hover v-slot="{ hover }">
+            <v-card
+              :elevation="hover ? 12 : 2"
+              :class="{ 'on-hover': hover }"
             >
-              <v-avatar
-                :class="{'border': hover}"
-                size="120"
+              <v-card-title
+                class="text-h6 white--text fill-height flex-column"
+                justify="space-between"
               >
-                <img
-                  alt="user"
-                  :src=" item.img"
+                <v-avatar
+                  :class="{'border': hover}"
+                  size="120"
                 >
-              </v-avatar>
-              <p class="mt-4 blue--text text-body-1">
-                {{ item.title }}
-              </p>
-            </v-card-title>
-            <v-card-title>
-              <p class="subheading text-left">
-                {{ item.subtext }}
-              </p>
-            </v-card-title>
-          </v-card>
-        </v-hover>
-      </v-col>
-    </v-row>
-  </v-container>
+                  <img
+                    alt="user"
+                    :src=" item.img"
+                  >
+                </v-avatar>
+                <p class="mt-4 blue--text text-body-1">
+                  {{ item.title }}
+                </p>
+              </v-card-title>
+              <v-card-title>
+                <p class="subheading text-left">
+                  {{ item.subtext }}
+                </p>
+              </v-card-title>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-parallax>
 </template>
 
 <script>
