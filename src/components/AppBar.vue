@@ -1,31 +1,26 @@
 <template>
   <v-app-bar
     fixed
+    color="#2a93c9"
     dense
-    color="light-blue lighten-1"
     prominent
-    height="20px"
+    height="45px"
     scroll-target="#scrolling-techniques-7"
   >
     <template
       #extension
     >
-      <v-div class="d-flex flex-row">
-        <v-toolbar-title class="black--text ml-16 mr-3">
-          Search Engine
-        </v-toolbar-title>
-        <v-img
-          src="http://homework.webmyidea.com/assets/images/logo.png"
-          width="30"
-          height="30"
-          class="mt-1"
-        />
-      </v-div>
+      <v-img
+        :src="require(`../assets/logo3.png`)"
+        max-width="200"
+        max-height="145"
+        class="mb-7 ml-6"
+      />
 
       <v-tabs
         align-with-title
         color="white"
-        class="ml-10 text-h5"
+        class=" text-h5"
       >
         <v-tab
           :to="{name: 'Home'}"
@@ -34,9 +29,6 @@
         </v-tab>
         <v-tab :to="{name: 'About'}">
           About us
-        </v-tab>
-        <v-tab :to="{name: 'Team'}">
-          Team
         </v-tab>
         <v-tab :to="{name: 'Companies'}">
           companies
@@ -47,24 +39,74 @@
       </v-tabs>
       <div class="d-flex flex-row mr-16">
         <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="hidden-sm-and-down"
-          icon
+          class="mx-1 mb-2"
+          fab
+          x-small
+          color="white"
         >
-          <v-icon size="20px">
-            {{ icon }}
+          <v-icon
+            color="indigo"
+          >
+            {{ icons.facebook }}
+          </v-icon>
+        </v-btn>
+
+        <v-btn
+          class="mx-1 mb-2"
+          fab
+          x-small
+          color="white"
+        >
+          <v-icon
+            color="cyan"
+          >
+            {{ icons.twitter }}
           </v-icon>
         </v-btn>
         <v-btn
-          icon
+          class="mx-1 mb-2"
+          fab
+          x-small
+          color="white"
+        >
+          <v-icon
+            color="red"
+          >
+            {{ icons.google }}
+          </v-icon>
+        </v-btn>
+
+        <v-btn
+          :to="{name: 'About'}"
+          class="mx-1 mb-2"
+          fab
+          x-small
+          color="white"
+        >
+          <v-icon
+            color="blue darken-4"
+          >
+            {{ icons.account }}
+          </v-icon>
+        </v-btn>
+        <v-btn
+          class="mx-1 mb-1"
+          fab
+          x-small
+          color="white"
           @click="$vuetify.theme.dark=!$vuetify.theme.dark"
         >
-          <v-icon v-if="!$vuetify.theme.dark">
-            mdi-weather-night
+          <v-icon
+            v-if="!$vuetify.theme.dark"
+            color="blue darken-4"
+          >
+            {{ icons.night }}
           </v-icon>
-          <v-icon v-else>
-            mdi-white-balance-sunny
+          <v-icon
+            v-else
+            color="lime"
+          >
+            {{ icons.sunny }}
           </v-icon>
         </v-btn>
       </div>
@@ -76,10 +118,15 @@
 export default {
   name: 'App',
   data: () => ({
-    icons: [
-      'mdi-facebook',
-      'mdi-twitter',
-    ],
+    icons: {
+      facebook: 'mdi-facebook',
+      twitter: 'mdi-twitter',
+      google: 'mdi-google-plus',
+      instagra: 'mdi-instagram',
+      account: ' mdi-account-plus',
+      night: 'mdi-weather-night',
+      sunny: ' mdi-white-balance-sunny',
+    },
   }),
 }
 </script>
