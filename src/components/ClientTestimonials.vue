@@ -87,17 +87,10 @@ export default {
         img: 'https://ld-wt73.template-help.com/wt_prod-20176/images/our-team-07-384x410.jpg',
       },
     ],
-    transparent: 'rgba(255, 255, 255, 0)',
   }),
 }
 </script>
 <style scoped>
-  .v-card {
-    transition: opacity .4s ease-in-out;
-  }
-  .show-btns {
-    color: rgba(255, 255, 255, 1) !important;
-  }
   .border{
     position: relative;
     content: '';
@@ -109,5 +102,4 @@ export default {
     transform: translatey(-14px);
     transition: all .3s ease-in-out;
 }
-
   </style>

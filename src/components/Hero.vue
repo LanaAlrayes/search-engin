@@ -1,7 +1,6 @@
 <template>
   <v-parallax
     id="home"
-    class="mt-16 mb-0"
     src="https://livedemo00.template-help.com/wt_prod-20844/images/breadcrumbs-bg.jpg"
   >
     <v-container>
@@ -15,12 +14,12 @@
         @click="overlay = !overlay"
       />
     </v-container>
-    <v-overlay :value="overlay">
+    <!-- <v-overlay :value="overlay">
       <v-progress-circular
         indeterminate
         size="64"
       />
-    </v-overlay>
+    </v-overlay> -->
   </v-parallax>
 </template>
 

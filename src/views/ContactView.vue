@@ -1,289 +1,295 @@
 <template>
   <div>
     <hero-contact />
-    <v-container
-      id="stats"
+    <v-parallax
+      height="100%"
+      src="https://demo.themexbd.com/rtl/smartdev/wp-content/uploads/2021/06/choose-bg.png"
     >
-      <v-row>
-        <v-col
-          cols="12"
-          md="7"
-        >
-          <p
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-            class="my-10 font-weight-medium text-h2"
+      <v-container
+        id="stats"
+      >
+        <v-row>
+          <v-col
+            cols="12"
+            md="7"
+            class="text--primary"
           >
-            Get In Touch
-          </p>
-          <p
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-          >
-            You can contact us any way that is convenient for you. We are available 24/7 via fax or email. You can also use a quick contact form below.
-          </p>
-          <p
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-          >
-            We would be happy to answer your questions.
-          </p>
-          <v-form
-            ref="form"
-            v-model="valid"
-            lazy-validation
-            @submit.prevent="send"
-          >
-            <v-row>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-text-field
-                  v-model="firstname"
-                  v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-                  :rules="nameRules"
-                  :counter="40"
-                  label="First Name"
-                  required
-                  :error-messages="errors.title"
-                  outlined
-                />
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-text-field
-                  v-model="lastname"
-                  v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-                  :rules="nameRules"
-                  :counter="40"
-                  label="Last Name"
-                  required
-                  :error-messages="errors.title"
-                  outlined
-                />
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-select
-                  v-model="select"
-                  v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-                  :items="items"
-                  label="Select"
-                  :error-messages="errors.type"
-                  :rules="selectRules"
-                  outlined
-                />
-              </v-col>
-              <v-col
-                cols="12"
-                sm="6"
-              >
-                <v-text-field
-                  v-model="email"
-                  v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-                  :rules="emailRules"
-                  label="E-mail"
-                  required
-                  :error-messages="errors.email"
-                  outlined
-                />
-              </v-col>
-            </v-row>
-            <v-textarea
-              v-model="message"
+            <p
               v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-              label="Your Message"
-              rows="4"
-              row-height="25"
-              :error-messages="errors.content"
-              outlined
-            />
-            <v-checkbox
-              v-model="agreement"
-              v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-              :rules="[rules.required]"
-              color="success"
+              class="my-10 font-weight-medium text-h2"
             >
-              <template #label>
-                I agree to the&nbsp;
-                <a
-                  href="#"
-                  @click.stop.prevent="dialog = true"
-                >Terms of Service</a>
-                &nbsp;and&nbsp;
-                <a
-                  href="#"
-                  @click.stop.prevent="dialog = true"
-                >Privacy Policy</a>*
-              </template>
-            </v-checkbox>
-            <v-btn
+              Get In Touch
+            </p>
+            <p
               v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-              :disabled="!valid"
-              color="success"
-              type="submit"
-              class="mr-4"
-              rounded
-              @click="validate"
             >
-              Send message
-            </v-btn>
-
-            <v-btn
+              You can contact us any way that is convenient for you. We are available 24/7 via fax or email. You can also use a quick contact form below.
+            </p>
+            <p
               v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-              rounded
-              @click="clear"
             >
-              clear
-            </v-btn>
-          </v-form>
-        </v-col>
+              We would be happy to answer your questions.
+            </p>
+            <v-form
+              ref="form"
+              v-model="valid"
+              lazy-validation
+              @submit.prevent="send"
+            >
+              <v-row>
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    v-model="firstname"
+                    v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                    :rules="nameRules"
+                    :counter="40"
+                    label="First Name"
+                    required
+                    :error-messages="errors.title"
+                    outlined
+                  />
+                </v-col>
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    v-model="lastname"
+                    v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                    :rules="nameRules"
+                    :counter="40"
+                    label="Last Name"
+                    required
+                    :error-messages="errors.title"
+                    outlined
+                  />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-select
+                    v-model="select"
+                    v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                    :items="items"
+                    label="Select"
+                    :error-messages="errors.type"
+                    :rules="selectRules"
+                    outlined
+                  />
+                </v-col>
+                <v-col
+                  cols="12"
+                  sm="6"
+                >
+                  <v-text-field
+                    v-model="email"
+                    v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                    :rules="emailRules"
+                    label="E-mail"
+                    required
+                    :error-messages="errors.email"
+                    outlined
+                  />
+                </v-col>
+              </v-row>
+              <v-textarea
+                v-model="message"
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                label="Your Message"
+                rows="4"
+                row-height="25"
+                :error-messages="errors.content"
+                outlined
+              />
+              <v-checkbox
+                v-model="agreement"
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                :rules="[rules.required]"
+                color="success"
+              >
+                <template #label>
+                  I agree to the&nbsp;
+                  <a
+                    href="#"
+                    @click.stop.prevent="dialog = true"
+                  >Terms of Service</a>
+                  &nbsp;and&nbsp;
+                  <a
+                    href="#"
+                    @click.stop.prevent="dialog = true"
+                  >Privacy Policy</a>*
+                </template>
+              </v-checkbox>
+              <v-btn
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                :disabled="!valid"
+                color="success"
+                type="submit"
+                class="mr-4"
+                rounded
+                @click="validate"
+              >
+                Send message
+              </v-btn>
 
-        <v-col
-          cols="12"
-          md="4"
-          class="ml-10 mt-10"
-        >
-          <div
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
-            class="my-16"
-            max-width="374"
+              <v-btn
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                rounded
+                @click="clear"
+              >
+                clear
+              </v-btn>
+            </v-form>
+          </v-col>
+
+          <v-col
+            cols="12"
+            md="4"
+            class="ml-10 mt-10 text--primary"
           >
-            <h6>SOCIALS</h6>
-            <v-divider class="mr-4 my-2" />
-            <div class="d-flex flex-row mr-16">
-              <v-btn
-                class="mx-1 mb-2"
-                fab
-                x-small
-                color="white"
-              >
-                <v-icon
-                  color="indigo"
+            <div
+              v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+              class="my-16"
+              max-width="374"
+            >
+              <h6>SOCIALS</h6>
+              <v-divider class="mr-4 my-2" />
+              <div class="d-flex flex-row mr-16">
+                <v-btn
+                  class="mx-1 mb-2"
+                  fab
+                  x-small
+                  color="white"
                 >
-                  {{ icons.facebook }}
-                </v-icon>
-              </v-btn>
+                  <v-icon
+                    color="indigo"
+                  >
+                    {{ icons.facebook }}
+                  </v-icon>
+                </v-btn>
 
-              <v-btn
-                class="mx-1 mb-2"
-                fab
-                x-small
-                color="white"
-              >
-                <v-icon
-                  color="cyan"
+                <v-btn
+                  class="mx-1 mb-2"
+                  fab
+                  x-small
+                  color="white"
                 >
-                  {{ icons.twitter }}
-                </v-icon>
-              </v-btn>
-              <v-btn
-                class="mx-1 mb-2"
-                fab
-                x-small
-                color="white"
-              >
-                <v-icon
-                  color="red"
+                  <v-icon
+                    color="cyan"
+                  >
+                    {{ icons.twitter }}
+                  </v-icon>
+                </v-btn>
+                <v-btn
+                  class="mx-1 mb-2"
+                  fab
+                  x-small
+                  color="white"
                 >
-                  {{ icons.google }}
-                </v-icon>
-              </v-btn>
+                  <v-icon
+                    color="red"
+                  >
+                    {{ icons.google }}
+                  </v-icon>
+                </v-btn>
 
-              <v-btn
-                :to="{name: 'About'}"
-                class="mx-1 mb-2"
-                fab
-                x-small
-                color="white"
-              >
-                <v-icon
-                  color="purple"
+                <v-btn
+                  :to="{name: 'About'}"
+                  class="mx-1 mb-2"
+                  fab
+                  x-small
+                  color="white"
                 >
-                  {{ icons.instagra }}
-                </v-icon>
-              </v-btn>
+                  <v-icon
+                    color="purple"
+                  >
+                    {{ icons.instagra }}
+                  </v-icon>
+                </v-btn>
+              </div>
             </div>
-          </div>
 
-          <div
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
-            class="my-16"
-            max-width="374"
-          >
-            <h6>ADDRESS</h6>
-            <v-divider class="mr-4 my-2" />
-            <p>
-              <v-icon
-                left
-                color="#2a93c9"
-                size="30px"
-              >
-                {{ icons.address }}
-              </v-icon>
-              <span
-                style="color:#757575"
-                class="text-h6 font-weight-medium"
-              >
-                {{ settings.search_address }}
-              </span>
-            </p>
-          </div>
-          <div
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
-            class="mx-auto my-16"
-            max-width="374"
-          >
-            <h6>PHONES</h6>
+            <div
+              v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+              class="my-16"
+              max-width="374"
+            >
+              <h6>ADDRESS</h6>
+              <v-divider class="mr-4 my-2" />
+              <p>
+                <v-icon
+                  left
+                  color="#2a93c9"
+                  size="30px"
+                >
+                  {{ icons.address }}
+                </v-icon>
+                <span
+                  style="color:#757575"
+                  class="text-h6 font-weight-medium"
+                >
+                  {{ settings.search_address }}
+                </span>
+              </p>
+            </div>
+            <div
+              v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+              class="mx-auto my-16"
+              max-width="374"
+            >
+              <h6>PHONES</h6>
 
-            <v-divider class="mr-4 my-2" />
-            <p>
-              <v-icon
-                left
-                color="#2a93c9"
-                size="30px"
-              >
-                {{ icons.phone }}
-              </v-icon>
-              <span
-                style="color:#757575"
-                class="text-h6 font-weight-medium"
-              >
-                {{ settings.search_phone }}
-              </span>
-            </p>
-          </div>
-          <div
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
-            class="mx-auto my-16"
-            max-width="374"
-          >
-            <h6>E-MAIL</h6>
+              <v-divider class="mr-4 my-2" />
+              <p>
+                <v-icon
+                  left
+                  color="#2a93c9"
+                  size="30px"
+                >
+                  {{ icons.phone }}
+                </v-icon>
+                <span
+                  style="color:#757575"
+                  class="text-h6 font-weight-medium"
+                >
+                  {{ settings.search_phone }}
+                </span>
+              </p>
+            </div>
+            <div
+              v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+              class="mx-auto my-16"
+              max-width="374"
+            >
+              <h6>E-MAIL</h6>
 
-            <v-divider class="mr-4 my-2" />
-            <p>
-              <v-icon
-                left
-                color="#2a93c9"
-                size="30px"
-              >
-                {{ icons.email }}
-              </v-icon>
-              <span
-                style="color:#757575"
-                class="text-h6 font-weight-medium"
-              >
-                {{ settings.search_email }}
-              </span>
-            </p>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
+              <v-divider class="mr-4 my-2" />
+              <p>
+                <v-icon
+                  left
+                  color="#2a93c9"
+                  size="30px"
+                >
+                  {{ icons.email }}
+                </v-icon>
+                <span
+                  style="color:#757575"
+                  class="text-h6 font-weight-medium"
+                >
+                  {{ settings.search_email }}
+                </span>
+              </p>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-parallax>
   </div>
 </template>
 <script>
@@ -306,8 +312,8 @@ export default ({
     },
 
     settings: {
-      search_phone: '0123456789',
-      search_address: 'Damascus',
+      search_phone: '+9963 954763265',
+      search_address: 'Syria Damascus',
       search_email: 'info@info.com',
     },
     selectRules: [
