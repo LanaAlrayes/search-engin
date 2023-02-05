@@ -1,3 +1,4 @@
+import store from '@/store'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
@@ -28,12 +29,29 @@ const routes = [
     name: 'Contact',
     component: () => import(/* webpackChunkName: "contact" */ '../views/ContactView.vue'),
   },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "login" */ '../views/LoginView.vue'),
+  },
+  {
+    path: '/add-companies-medicine',
+    name: 'AddCompaniesMedicineView',
+    component: () => import(/* webpackChunckName: "add-companies-medicine-view") */ '../views/AddCompaniesMedicineView.vue'),
+    meta: {
+      auth: false,
+    },
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+})
+
+router.beforeEach((to, from, next) => {
+  if (!store.state.token && to.meta.auth) { next('login') } else next()
 })
 
 export default router
