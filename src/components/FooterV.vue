@@ -273,7 +273,7 @@ export default {
     },
     settings: {
       search_name: 'Syrian Drug Index',
-      search_phone: '+9963 954763265',
+      search_phone: '+963 954763265',
       search_address: 'Syria Damascus',
       search_email: 'info@info.com',
     },

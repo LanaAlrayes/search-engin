@@ -1,7 +1,7 @@
 <template>
   <v-parallax
     height="100%"
-    src="https://demo.themexbd.com/rtl/smartdev/wp-content/uploads/2021/06/blog-shape.png"
+    src="https://demo.themexbd.com/rtl/smartdev/wp-content/uploads/2021/06/choose-bg.png"
   >
     <v-container
       id="client"

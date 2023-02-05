@@ -12,7 +12,7 @@
           <v-col
             cols="12"
             md="7"
-            class="text--primary"
+            class="text--primary my-16"
           >
             <p
               v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
@@ -198,9 +198,7 @@
                     {{ icons.google }}
                   </v-icon>
                 </v-btn>
-
                 <v-btn
-                  :to="{name: 'About'}"
                   class="mx-1 mb-2"
                   fab
                   x-small
@@ -312,7 +310,7 @@ export default ({
     },
 
     settings: {
-      search_phone: '+9963 954763265',
+      search_phone: '+963 954763265',
       search_address: 'Syria Damascus',
       search_email: 'info@info.com',
     },

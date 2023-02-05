@@ -77,7 +77,7 @@
         </v-btn>
 
         <v-btn
-          :to="{name: 'About'}"
+          :to="{name: 'Login'}"
           class="mx-1 mb-2"
           fab
           x-small
