@@ -35,9 +35,17 @@ const routes = [
     component: () => import(/* webpackChunkName: "login" */ '../views/LoginView.vue'),
   },
   {
-    path: '/add-companies-medicine',
-    name: 'AddCompaniesMedicineView',
-    component: () => import(/* webpackChunckName: "add-companies-medicine-view") */ '../views/AddCompaniesMedicineView.vue'),
+    path: '/add-medicine',
+    name: 'AddMedicineView',
+    component: () => import(/* webpackChunckName: "add-medicine-view") */ '../views/AddMedicineView.vue'),
+    meta: {
+      auth: false,
+    },
+  },
+  {
+    path: '/add-companies',
+    name: 'AddCompaniesView',
+    component: () => import(/* webpackChunckName: "add-companies-view") */ '../views/AddCompaniesView.vue'),
     meta: {
       auth: false,
     },
