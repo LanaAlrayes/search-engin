@@ -6,9 +6,9 @@ import './registerServiceWorker'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import * as VueAos from 'vue-aos'
-import { ValidationProvider } from 'vee-validate'
+import VueAos from 'vue-aos'
 import 'animate.css'
+import { ValidationProvider } from 'vee-validate'
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)

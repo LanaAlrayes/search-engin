@@ -4,37 +4,113 @@
     src="https://livedemo00.template-help.com/wt_prod-20844/images/breadcrumbs-bg.jpg"
   >
     <v-container>
-      <v-text-field
-        append-icon="mdi-microphone"
-        hide-details
+      <v-autocomplete
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="mx-4"
         dark
-        label="Search"
-        prepend-inner-icon="mdi-magnify"
+        hide-no-data
+        hide-details
+        label="Start typing to Search"
         solo-inverted
-        @click="overlay = !overlay"
+        prepend-inner-icon="mdi-magnify"
       />
     </v-container>
-    <!-- <v-overlay :value="overlay">
-      <v-progress-circular
-        indeterminate
-        size="64"
-      />
-    </v-overlay> -->
   </v-parallax>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  data: () => ({
-    overlay: false,
-  }),
+  data () {
+    return {
+      loading: false,
+      items: [],
+      search: null,
+      select: null,
+      states: [
+        'Alabama',
+        'Alaska',
+        'American Samoa',
+        'Arizona',
+        'Arkansas',
+        'California',
+        'Colorado',
+        'Connecticut',
+        'Delaware',
+        'District of Columbia',
+        'Federated States of Micronesia',
+        'Florida',
+        'Georgia',
+        'Guam',
+        'Hawaii',
+        'Idaho',
+        'Illinois',
+        'Indiana',
+        'Iowa',
+        'Kansas',
+        'Kentucky',
+        'Louisiana',
+        'Maine',
+        'Marshall Islands',
+        'Maryland',
+        'Massachusetts',
+        'Michigan',
+        'Minnesota',
+        'Mississippi',
+        'Missouri',
+        'Montana',
+        'Nebraska',
+        'Nevada',
+        'New Hampshire',
+        'New Jersey',
+        'New Mexico',
+        'New York',
+        'North Carolina',
+        'North Dakota',
+        'Northern Mariana Islands',
+        'Ohio',
+        'Oklahoma',
+        'Oregon',
+        'Palau',
+        'Pennsylvania',
+        'Puerto Rico',
+        'Rhode Island',
+        'South Carolina',
+        'South Dakota',
+        'Tennessee',
+        'Texas',
+        'Utah',
+        'Vermont',
+        'Virgin Island',
+        'Virginia',
+        'Washington',
+        'West Virginia',
+        'Wisconsin',
+        'Wyoming',
+      ],
+    }
+  },
   watch: {
-    overlay (val) {
-      val && setTimeout(() => {
-        this.overlay = false
-      }, 3000)
+    search (val) {
+      val && val !== this.select && this.querySelections(val)
     },
   },
+  methods: {
+    querySelections (v) {
+      this.loading = true
+      // Simulated ajax query
+      setTimeout(() => {
+        this.items = this.states.filter(e => {
+          return (e || '').toLowerCase().indexOf((v || '').toLowerCase()) > -1
+        })
+        this.loading = false
+      }, 500)
+    },
+  },
+  overlay: false,
 }
 </script>

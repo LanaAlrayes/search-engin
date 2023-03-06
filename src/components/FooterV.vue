@@ -1,7 +1,5 @@
 <template>
   <v-footer
-    cols="12"
-    md="3"
     padless
     height="350"
     color="#2a93c9"
@@ -11,9 +9,10 @@
         class="align-center justify-space-between"
       >
         <v-col
-          v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+          v-vue-aos="{animationClass:'animate__fadeInRight animate__animated'}"
           cols="12"
-          md="4"
+          md="3"
+          sm="4"
         >
           <v-img
             :src="require(`../assets/logo3.png`)"
@@ -77,9 +76,10 @@
           cols="12"
           md="4"
           class="mt-8"
+          color="#2a93c9"
         >
           <v-list
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+            v-vue-aos="{animationClass:'animate__fadeInRight animate__animated'}"
             color="#2a93c9"
           >
             <v-subheader class="text-uppercase font-weight-bold text-h6 white--text">
@@ -143,7 +143,7 @@
           class="mt-3"
         >
           <v-list
-            v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+            v-vue-aos="{animationClass:'animate__fadeInLeft animate__animated'}"
             color="#2a93c9"
           >
             <v-subheader class="text-uppercase font-weight-bold text-h6 white--text">
