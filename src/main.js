@@ -10,6 +10,9 @@ import VueAos from 'vue-aos'
 import 'animate.css'
 import { ValidationProvider } from 'vee-validate'
 
+axios.defaults.baseURL = 'http://127.0.0.1:8080'
+axios.defaults.headers.Authorization = `Bearer ${store.state.token}`
+
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)
 Vue.use(VueAos)

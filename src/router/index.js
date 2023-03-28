@@ -21,8 +21,13 @@ const routes = [
   },
   {
     path: '/company',
-    name: 'Companies',
+    name: 'Company',
     component: () => import(/* webpackChunkName: "company" */ '../views/CompanyView.vue'),
+  },
+  {
+    path: '/companies',
+    name: 'Companies',
+    component: () => import(/* webpackChunkName: "companies" */ '../views/CompaniesView.vue'),
   },
   {
     path: '/contact',
@@ -39,7 +44,15 @@ const routes = [
     name: 'AddMedicineView',
     component: () => import(/* webpackChunckName: "add-medicine-view") */ '../views/AddMedicineView.vue'),
     meta: {
-      auth: false,
+      auth: true,
+    },
+  },
+  {
+    path: '/data-medicine',
+    name: 'DataMedicineView',
+    component: () => import(/* webpackChunckName: "data-Medicine-view") */ '../views/DataMedicineView.vue'),
+    meta: {
+      auth: true,
     },
   },
   {
@@ -47,7 +60,15 @@ const routes = [
     name: 'AddCompaniesView',
     component: () => import(/* webpackChunckName: "add-companies-view") */ '../views/AddCompaniesView.vue'),
     meta: {
-      auth: false,
+      auth: true,
+    },
+  },
+  {
+    path: '/data-company',
+    name: 'DataCompanyView',
+    component: () => import(/* webpackChunckName: "data-company-view") */ '../views/DataCompanyView.vue'),
+    meta: {
+      auth: true,
     },
   },
 ]
@@ -59,7 +80,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (!store.state.token && to.meta.auth) { next('login') } else next()
+  if (!store.state.token && to.meta.auth) { next('/login') } else next()
 })
 
 export default router
