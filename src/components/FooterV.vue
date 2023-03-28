@@ -86,7 +86,7 @@
               Contact us
             </v-subheader>
             <v-divider
-              class="mr-16"
+              class="mr-16 ml-4"
               color="white"
             />
 
@@ -150,7 +150,7 @@
               NEWSLETTER
             </v-subheader>
             <v-divider
-              class="mr-4"
+              class="mx-4"
               color="white"
             />
             <v-row>
@@ -282,7 +282,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .v-application {
   font-family: 'Teko' !important;
 }
