@@ -15,6 +15,7 @@
         max-width="200"
         max-height="145"
         class="mb-7 ml-6"
+        @click="$router.push({name: 'Home'})"
       />
 
       <v-tabs
@@ -30,11 +31,14 @@
         <v-tab :to="{name: 'About'}">
           About us
         </v-tab>
-        <v-tab :to="{name: 'Companies'}">
-          companies
-        </v-tab>
         <v-tab :to="{name: 'Contact'}">
           Contact Us
+        </v-tab>
+        <v-tab :to="{name: 'AddCompaniesView'}">
+          Company
+        </v-tab>
+        <v-tab :to="{name: 'AddMedicineView'}">
+          Medicine
         </v-tab>
       </v-tabs>
       <div class="d-flex flex-row mr-16">
@@ -77,6 +81,7 @@
         </v-btn>
 
         <v-btn
+          v-if="$store.state.token == null"
           :to="{name: 'Login'}"
           class="mx-1 mb-2"
           fab
@@ -87,6 +92,19 @@
             color="blue darken-4"
           >
             {{ icons.account }}
+          </v-icon>
+        </v-btn>
+        <v-btn
+          class="mx-1 mb-2"
+          fab
+          x-small
+          color="white"
+          @click="$store.state.token=null"
+        >
+          <v-icon
+            color="blue darken-4"
+          >
+            {{ icons.account1 }}
           </v-icon>
         </v-btn>
         <v-btn
@@ -123,7 +141,8 @@ export default {
       twitter: 'mdi-twitter',
       google: 'mdi-google-plus',
       instagra: 'mdi-instagram',
-      account: ' mdi-account-plus',
+      account: ' mdi-account',
+      account1: 'mdi-login',
       night: 'mdi-weather-night',
       sunny: ' mdi-white-balance-sunny',
     },
