@@ -233,7 +233,7 @@
                 <v-hover v-slot="{ hover }">
                   <v-img
                     v-vue-aos="{animationClass:'animate__animated animate__slideInRight'}"
-                    src="https://sigmadigitalpartners.com/themes/templatemonster/html/pharmia/assets/images/about/3.jpg"
+                    src="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-1-229x170.jpg"
                     aspect-ratio="1"
                     class="grey lighten-2"
                     :class="{'scale': hover}"
@@ -252,7 +252,7 @@
                           <v-btn
                             target="_blank"
                             icon
-                            href="https://sigmadigitalpartners.com/themes/templatemonster/html/pharmia/assets/images/about/3.jpg"
+                            href="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-1-229x170.jpg"
                           >
                             <v-icon>mdi-magnify-plus-outline</v-icon>
                           </v-btn><br>
@@ -476,7 +476,7 @@
                 <v-hover v-slot="{ hover }">
                   <v-img
                     v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
-                    src="https://sigmadigitalpartners.com/themes/templatemonster/html/pharmia/assets/images/about/3.jpg"
+                    src="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-1-229x170.jpg"
                     aspect-ratio="1"
                     class="grey lighten-2"
                     :class="{'scale': hover}"
@@ -495,7 +495,7 @@
                           <v-btn
                             target="_blank"
                             icon
-                            href="https://sigmadigitalpartners.com/themes/templatemonster/html/pharmia/assets/images/about/3.jpg"
+                            href="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-1-229x170.jpg"
                           >
                             <v-icon>mdi-magnify-plus-outline</v-icon>
                           </v-btn><br>
