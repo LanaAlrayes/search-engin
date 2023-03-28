@@ -69,15 +69,36 @@
             <div class="text mt-2">
               {{ company.summary }}
             </div>
-            <v-btn
-              class="mt-12"
-              outlined
-              color="#2a93c9"
-              large
-              @click="$router.push('/company')"
-            >
-              MORE INFO
-            </v-btn>
+            <div>
+              <p class="mt-2">
+                <v-icon
+                  left
+                  color="#2a93c9"
+                  size="25px"
+                >
+                  {{ icons.email }}
+                </v-icon>
+                <span
+                  class="text-h6 "
+                >
+                  {{ company.email }}
+                </span>
+              </p>
+              <p>
+                <v-icon
+                  left
+                  color="#2a93c9"
+                  size="25px"
+                >
+                  {{ icons.home }}
+                </v-icon>
+                <span
+                  class="text-h6 "
+                >
+                  {{ company.website }}
+                </span>
+              </p>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -98,23 +119,11 @@ export default {
         src: 'https://ld-wt73.template-help.com/wt_prod-20176/images/background-breadcrumbs-01-1920x345.jpg',
       },
     ],
-    companies: [
-      {
-        // name: 'Ultra Medica',
-        // summary: 'Since its inception in 1955, when Ultra Medica began to take its place in the world of pharmaceutical industries in Syria, it has been built on the basis of its enthusiasm and emphasis on hard work to develop the life sciences industry.Now, Ultra Medica is one of the largest and fastest growing companies in Syria.',
-        src: 'https://livedemo00.template-help.com/wt_prod-20844/images/news-1-325x220.jpg',
-      },
-      {
-        // name: 'Human Pharma',
-        // summary: 'Im a thing. But, like most politicians, he promised more than he could deliver. You wont have time for sleeping, soldier, not with all the bed making youll be doing. Then well go with that data file! Hey, you add a one and two zeros to that or we walk! Youre going to do his laundry? Ive got to find a way to escape.',
-        src: 'https://livedemo00.template-help.com/wt_prod-20844/images/news-3-325x220.jpg',
-      },
-      {
-        // name: 'Ultra Medica',
-        // summary: 'Im a thing. But, like most politicians, he promised more than he could deliver. You wont have time for sleeping, soldier, not with all the bed making youll be doing. Then well go with that data file! Hey, you add a one and two zeros to that or we walk! Youre going to do his laundry? Ive got to find a way to escape.',
-        src: 'https://livedemo00.template-help.com/wt_prod-20844/images/index-image-4-390x332.jpg',
-      },
-    ],
+    companies: [],
+    icons: {
+      email: 'mdi-email',
+      home: 'mdi-home',
+    },
   }),
   mounted () {
     const self = this
