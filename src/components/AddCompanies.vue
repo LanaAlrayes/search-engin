@@ -5,12 +5,15 @@
   >
     <v-container>
       <div
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
         class="text-h4  mx-auto my-12 text--primary"
       >
         You can add the company now
       </div>
       <v-row>
-        <v-col cols="10">
+        <v-col
+          cols="10"
+        >
           <validation-observer
             ref="observer"
           >
@@ -28,6 +31,7 @@
                   >
                     <v-text-field
                       v-model="companyName"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :counter="40"
                       :error-messages="errors"
                       label="Company Name"
@@ -41,6 +45,7 @@
                   >
                     <v-text-field
                       v-model="summary"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :error-messages="errors"
                       label="Summary"
                       required
@@ -54,6 +59,7 @@
                   >
                     <v-text-field
                       v-model="companyAddress"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :counter="50"
                       :error-messages="errors"
                       label="Company Address"
@@ -68,6 +74,7 @@
                   >
                     <v-text-field
                       v-model="email"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :error-messages="errors"
                       label="E-mail"
                       required
@@ -81,6 +88,7 @@
                   >
                     <v-text-field
                       v-model="numberProducts"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :counter="10"
                       :error-messages="errors"
                       label="Number of Products"
@@ -97,6 +105,7 @@
               >
                 <v-checkbox
                   v-model="checkbox"
+                  v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                   :error-messages="errors"
                   value="1"
                   label="Option"
@@ -106,6 +115,7 @@
                 />
               </validation-provider>
               <v-btn
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                 class="mr-4"
                 color="success"
                 type="submit"
@@ -113,7 +123,10 @@
               >
                 submit
               </v-btn>
-              <v-btn @click="clear">
+              <v-btn
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                @click="clear"
+              >
                 clear
               </v-btn>
             </form>

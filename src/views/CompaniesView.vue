@@ -29,12 +29,14 @@
             cols="4"
           >
             <v-img
+              v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
               src="https://livedemo00.template-help.com/wt_prod-20844/images/index-image-4-390x332.jpg"
-
               height="300px"
             />
           </v-col>
           <v-col
+            v-vue-aos="{animationClass:'animate__animated animate__fadeInRight'}"
+
             cols="5"
             class="text--primary"
           >
@@ -128,8 +130,7 @@ export default {
   mounted () {
     const self = this
     this.axios.get('/get_companys').then(res => {
-      self.companies = res.data.slice(8, 10)
-      // self.companies = res.data
+      self.companies = res.data
     })
   },
 }
