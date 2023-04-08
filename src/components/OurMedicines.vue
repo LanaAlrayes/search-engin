@@ -24,6 +24,8 @@
         <v-tabs
           color="blue"
           centered
+          cols="6"
+          sm="4"
         >
           <v-tab>All</v-tab>
           <v-tab>Pills</v-tab>

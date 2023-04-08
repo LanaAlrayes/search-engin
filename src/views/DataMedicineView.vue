@@ -35,7 +35,7 @@
                     >
                       <v-text-field
                         v-model="editedItem.name"
-                        label="Dessert name"
+                        label="Name"
                       />
                     </v-col>
                     <v-col
@@ -45,7 +45,7 @@
                     >
                       <v-text-field
                         v-model="editedItem.type"
-                        label="type"
+                        label="Type"
                       />
                     </v-col>
                     <v-col
@@ -54,8 +54,8 @@
                       md="4"
                     >
                       <v-text-field
-                        v-model="editedItem.genericName"
-                        label="genericName"
+                        v-model="editedItem.generic_Name"
+                        label="Generic name"
                       />
                     </v-col>
                     <v-col
@@ -64,8 +64,8 @@
                       md="4"
                     >
                       <v-text-field
-                        v-model="editedItem.companyName"
-                        label="companyName"
+                        v-model="editedItem.company"
+                        label="Company name"
                       />
                     </v-col>
                     <v-col
@@ -74,8 +74,8 @@
                       md="4"
                     >
                       <v-text-field
-                        v-model="editedItem.contraindications"
-                        label="contraindications"
+                        v-model="editedItem.about"
+                        label="Contraindications"
                       />
                     </v-col>
                     <v-col
@@ -84,8 +84,8 @@
                       md="4"
                     >
                       <v-text-field
-                        v-model="editedItem.sideEffects"
-                        label="sideEffects"
+                        v-model="editedItem.side_effects"
+                        label="Undesirable effects"
                       />
                     </v-col>
                     <v-col
@@ -94,8 +94,8 @@
                       md="4"
                     >
                       <v-text-field
-                        v-model="editedItem.biologicClassification"
-                        label="biologicClassification"
+                        v-model="editedItem.biologic_classification"
+                        label="Biologic classification"
                       />
                     </v-col>
                     <v-col
@@ -104,8 +104,8 @@
                       md="4"
                     >
                       <v-text-field
-                        v-model="editedItem.dosageAndAdministration"
-                        label="dosageAndAdministration"
+                        v-model="editedItem.uses"
+                        label="Dosage and administration"
                       />
                     </v-col>
                     <v-col
@@ -114,8 +114,8 @@
                       md="4"
                     >
                       <v-text-field
-                        v-model="editedItem.pharmaceuticalForm"
-                        label="pharmaceuticalForm"
+                        v-model="editedItem.type"
+                        label="Pharmaceutical form"
                       />
                     </v-col>
                   </v-row>
@@ -203,13 +203,11 @@ export default {
     dialogDelete: false,
     headers: [
       {
-        text: 'Name',
         align: 'start',
         sortable: false,
-        value: 'name',
       },
       { text: 'Medicament name', value: 'name' },
-      { text: 'Generic name', value: 'generic_name' },
+      { text: 'Generic name', value: 'generic_Name' },
       { text: 'Company name', value: 'company' },
       { text: 'Contraindications', value: 'about' },
       { text: 'Undesirable effects', value: 'side_effects' },
@@ -221,7 +219,6 @@ export default {
     desserts: [],
     editedIndex: -1,
     editedItem: {
-      name: '',
       medicamentName: '',
       genericName: '',
       companyName: '',
@@ -232,7 +229,6 @@ export default {
       pharmaceuticalForm: '',
     },
     defaultItem: {
-      name: '',
       medicamentName: '',
       genericName: '',
       companyName: '',
@@ -243,13 +239,6 @@ export default {
       pharmaceuticalForm: '',
     },
   }),
-
-  // computed: {
-  //   formTitle () {
-  //     return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
-  //   },
-  // },
-
   watch: {
     dialog (val) {
       val || this.close()
@@ -267,7 +256,7 @@ export default {
     initialize () {
       const payload = {
         name: this.medicamentName,
-        generic_name: this.genericName,
+        generic_Name: this.genericName,
         company: this.companyName,
         about: this.contraindications,
         side_effects: this.sideEffects,
@@ -276,7 +265,7 @@ export default {
         type: this.pharmaceuticalForm,
       }
       const self = this
-      this.axios.get('/get_comany/', payload).then(res => {
+      this.axios.get('/get_medicine/', payload).then(res => {
         self.desserts = res.data
       })
     },

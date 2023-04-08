@@ -10,7 +10,9 @@
         You can add the medicine now
       </div>
       <v-row>
-        <v-col cols="10">
+        <v-col
+          cols="10"
+        >
           <validation-observer
             ref="observer"
           >
