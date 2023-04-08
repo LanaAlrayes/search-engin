@@ -205,9 +205,9 @@
                   color="white"
                 >
                   <v-icon
-                    color="purple"
+                    color="indigo"
                   >
-                    {{ icons.instagra }}
+                    {{ icons.linked }}
                   </v-icon>
                 </v-btn>
               </div>
@@ -306,7 +306,7 @@ export default ({
       facebook: 'mdi-facebook',
       twitter: 'mdi-twitter',
       google: 'mdi-google-plus',
-      instagra: 'mdi-instagram',
+      linked: 'mdi-linkedin',
     },
 
     settings: {
