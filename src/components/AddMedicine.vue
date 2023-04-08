@@ -5,6 +5,7 @@
   >
     <v-container>
       <div
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
         class="text-h4 my-12 text--primary"
       >
         You can add the medicine now
@@ -26,6 +27,7 @@
                   >
                     <v-text-field
                       v-model="medicamentName"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :counter="40"
                       :error-messages="errors"
                       label="Medicament name"
@@ -41,6 +43,7 @@
                   >
                     <v-text-field
                       v-model="genericName"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :counter="50"
                       :error-messages="errors"
                       label="Generic name"
@@ -56,6 +59,7 @@
                   >
                     <v-text-field
                       v-model="companyName"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :counter="40"
                       :error-messages="errors"
                       label="Company name"
@@ -70,6 +74,7 @@
                   >
                     <v-text-field
                       v-model="contraindications"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :error-messages="errors"
                       label="Contraindications"
                       required
@@ -84,6 +89,7 @@
                   >
                     <v-text-field
                       v-model="sideEffects"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :error-messages="errors"
                       label="Undesirable effects"
                       required
@@ -97,6 +103,7 @@
                   >
                     <v-text-field
                       v-model="biologicClassification"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :error-messages="errors"
                       label="Biologic classification"
                       required
@@ -110,6 +117,7 @@
                   >
                     <v-text-field
                       v-model="dosageAndAdministration"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :error-messages="errors"
                       label="Dosage and administration"
                       required
@@ -123,6 +131,7 @@
                   >
                     <v-text-field
                       v-model="pharmaceuticalForm"
+                      v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                       :error-messages="errors"
                       label="Pharmaceutical form"
                       required
@@ -138,6 +147,7 @@
               >
                 <v-checkbox
                   v-model="checkbox"
+                  v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                   :error-messages="errors"
                   value="1"
                   label="Option"
@@ -147,13 +157,17 @@
                 />
               </validation-provider>
               <v-btn
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
                 class="mr-4"
                 color="success"
                 type="submit"
               >
                 submit
               </v-btn>
-              <v-btn @click="clear">
+              <v-btn
+                v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
+                @click="clear"
+              >
                 clear
               </v-btn>
             </form>

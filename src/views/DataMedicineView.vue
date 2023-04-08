@@ -11,6 +11,8 @@
     /></svg>
     <v-container>
       <v-data-table
+        :key="desserts.name"
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
         :headers="headers"
         :items="desserts"
         sort-by="type"
@@ -20,126 +22,7 @@
           <v-dialog
             v-model="dialog"
             max-width="500px"
-          >
-            <v-card>
-              <v-card-title>
-                <span class="text-h5">{{ formTitle }}</span>
-              </v-card-title>
-              <v-card-text>
-                <v-container>
-                  <v-row>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.name"
-                        label="Name"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.type"
-                        label="Type"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.generic_Name"
-                        label="Generic name"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.company"
-                        label="Company name"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.about"
-                        label="Contraindications"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.side_effects"
-                        label="Undesirable effects"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.biologic_classification"
-                        label="Biologic classification"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.uses"
-                        label="Dosage and administration"
-                      />
-                    </v-col>
-                    <v-col
-                      cols="12"
-                      sm="6"
-                      md="4"
-                    >
-                      <v-text-field
-                        v-model="editedItem.type"
-                        label="Pharmaceutical form"
-                      />
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer />
-                <v-btn
-                  color="blue darken-1"
-                  text
-                  @click="close"
-                >
-                  Cancel
-                </v-btn>
-                <v-btn
-                  color="blue darken-1"
-                  text
-                  @click="save"
-                >
-                  Save
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
+          />
           <v-dialog
             v-model="dialogDelete"
             max-width="500px"
@@ -160,7 +43,7 @@
                 <v-btn
                   color="blue darken-1"
                   text
-                  @click="deleteItemConfirm"
+                  @click="deleteItemConfirm(desserts.name)"
                 >
                   OK
                 </v-btn>
@@ -170,13 +53,6 @@
           </v-dialog>
         </template>
         <template #[`item.actions`]="{ item }">
-          <v-icon
-            small
-            class="mr-2"
-            @click="editItem(item)"
-          >
-            mdi-pencil
-          </v-icon>
           <v-icon
             small
             @click="deleteItem(item)"
@@ -270,29 +146,23 @@ export default {
       })
     },
 
-    editItem (item) {
-      this.editedIndex = this.desserts.indexOf(item)
-      this.editedItem = Object.assign({}, item)
-      this.dialog = true
-    },
-
     deleteItem (item) {
-      this.editedIndex = this.desserts.indexOf(item)
-      this.editedItem = Object.assign({}, item)
       this.dialogDelete = true
     },
 
-    deleteItemConfirm () {
+    deleteItemConfirm (name) {
+      const payload = {
+        name: this.name,
+      }
+      this.axios.get('/delete_medicine/' + name, payload).then(res => {
+        if (res.data === 'DONE') {
+          self.desserts = res.data
+        } else {
+          window.location = '/data-medicine'
+        }
+      })
       this.desserts.splice(this.editedIndex, 1)
       this.closeDelete()
-    },
-
-    close () {
-      this.dialog = false
-      this.$nextTick(() => {
-        this.editedItem = Object.assign({}, this.defaultItem)
-        this.editedIndex = -1
-      })
     },
 
     closeDelete () {
@@ -303,14 +173,6 @@ export default {
       })
     },
 
-    save () {
-      if (this.editedIndex > -1) {
-        Object.assign(this.desserts[this.editedIndex], this.editedItem)
-      } else {
-        this.desserts.push(this.editedItem)
-      }
-      this.close()
-    },
   },
 }
 </script>
