@@ -1,5 +1,7 @@
 <template>
   <v-app-bar
+    cols="6"
+    md="4"
     fixed
     color="#2a93c9"
     dense
@@ -19,6 +21,8 @@
       />
 
       <v-tabs
+        cols="6"
+        md="4"
         align-with-title
         color="white"
         class=" text-h5"
@@ -41,7 +45,11 @@
           Medicine
         </v-tab>
       </v-tabs>
-      <div class="d-flex flex-row mr-16">
+      <div
+        cols="6"
+        md="4"
+        class="d-flex flex-row mr-16"
+      >
         <v-btn
           class="mx-1 mb-2"
           fab
@@ -68,19 +76,6 @@
           </v-icon>
         </v-btn>
         <v-btn
-          class="mx-1 mb-2"
-          fab
-          x-small
-          color="white"
-        >
-          <v-icon
-            color="red"
-          >
-            {{ icons.google }}
-          </v-icon>
-        </v-btn>
-
-        <v-btn
           v-if="$store.state.token == null"
           :to="{name: 'Login'}"
           class="mx-1 mb-2"
@@ -89,7 +84,7 @@
           color="white"
         >
           <v-icon
-            color="blue darken-4"
+            color="indigo"
           >
             {{ icons.account }}
           </v-icon>
@@ -102,7 +97,7 @@
           @click="$store.state.token=null"
         >
           <v-icon
-            color="blue darken-4"
+            color="red"
           >
             {{ icons.account1 }}
           </v-icon>
@@ -140,7 +135,6 @@ export default {
       facebook: 'mdi-facebook',
       twitter: 'mdi-twitter',
       google: 'mdi-google-plus',
-      instagra: 'mdi-instagram',
       account: ' mdi-account',
       account1: 'mdi-login',
       night: 'mdi-weather-night',

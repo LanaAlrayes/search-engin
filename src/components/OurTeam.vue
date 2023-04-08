@@ -29,10 +29,9 @@
           v-for="(teams,i) in team"
           :key="i"
           v-vue-aos="{animationClass:'animate__animated animate__fadeInLeft'}"
-          class="text-center justify-center ml-10"
+          class="text-center justify-center"
           cols="12"
-          md="3"
-          sm="4"
+          md="4"
         >
           <v-hover v-slot="{ hover }">
             <v-card
@@ -73,9 +72,9 @@
                           color="white"
                         >
                           <v-icon
-                            color="indigo"
+                            color="cyan"
                           >
-                            {{ icons.google }}
+                            {{ icons.twitter }}
                           </v-icon>
                         </v-btn>
                         <v-btn
@@ -115,12 +114,6 @@ export default {
     return {
       team: [
         {
-          name: 'Lana Alrayes',
-          job_title: 'Front End',
-          img: 'Lana.jpg',
-          university: 'Syrian Virtual University',
-        },
-        {
           name: 'Ammar Khadaj',
           job_title: 'Data Bases',
           img: 'Amar.jpg',
@@ -132,12 +125,17 @@ export default {
           img: 'Reem.png',
           university: 'Syrian Virtual University',
         },
-
+        {
+          name: 'Lana Alrayes',
+          job_title: 'Front End',
+          img: 'Lana.jpg',
+          university: 'Syrian Virtual University',
+        },
       ],
       icons: {
         facebook: 'mdi-facebook',
         linked: 'mdi-linkedin',
-        google: 'mdi-google-plus',
+        twitter: 'mdi-twitter',
       },
     }
   },

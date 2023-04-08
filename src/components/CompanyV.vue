@@ -1,6 +1,8 @@
 <template>
   <v-carousel
     id="company"
+    cols="6"
+    md="4"
     cycle
     height="500"
     hide-delimiter-background
@@ -21,14 +23,14 @@
               v-vue-aos="{animationClass:'animate__animated animate__slideInUp'}"
               class="justify-center text-center text-h4"
             >
-              Welcome to our company
+              There are many companies
             </div>
             <v-btn
               v-vue-aos="{animationClass:'animate__slideInDown animate__animated'}"
               class="mt-6"
               :to="{name: 'Companies'}"
             >
-              See more info
+              See more
             </v-btn>
           </v-container>
         </v-row>

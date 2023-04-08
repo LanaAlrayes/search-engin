@@ -10,9 +10,9 @@
       >
         <v-col
           v-vue-aos="{animationClass:'animate__fadeInRight animate__animated'}"
+          color="#2a93c9"
           cols="12"
-          md="3"
-          sm="4"
+          md="4"
         >
           <v-img
             :src="require(`../assets/logo3.png`)"
@@ -64,9 +64,9 @@
               color="white"
             >
               <v-icon
-                color="purple"
+                color="indigo"
               >
-                {{ icons.instagra }}
+                {{ icons.linked }}
               </v-icon>
             </v-btn>
           </div>
@@ -75,7 +75,7 @@
         <v-col
           cols="12"
           md="4"
-          class="mt-8"
+          class="mt-6"
           color="#2a93c9"
         >
           <v-list
@@ -140,7 +140,7 @@
         <v-col
           cols="12"
           md="4"
-          class="mt-3"
+          color="#2a93c9"
         >
           <v-list
             v-vue-aos="{animationClass:'animate__fadeInLeft animate__animated'}"
@@ -154,7 +154,9 @@
               color="white"
             />
             <v-row>
-              <v-col>
+              <v-col
+                cols="6"
+              >
                 <v-list-item>
                   <v-icon color="#f1f7fc">
                     {{ icons.circle }}
@@ -197,7 +199,9 @@
                   </v-list-item>
                 </v-list-item>
               </v-col>
-              <v-col>
+              <v-col
+                cols="6"
+              >
                 <v-list-item>
                   <v-icon color="#f1f7fc">
                     {{ icons.circle }}
@@ -252,7 +256,7 @@
         color="#2a93c9"
       >
         <div
-          class="pt-8"
+          color="#2a93c9"
         >
           &copy; {{ new Date().getFullYear() }} — <strong>{{ settings.search_name }} .Privacy Policy</strong>
         </div>
@@ -268,7 +272,7 @@ export default {
       facebook: 'mdi-facebook',
       twitter: 'mdi-twitter',
       google: 'mdi-google-plus',
-      instagra: 'mdi-instagram',
+      linked: 'mdi-linkedin',
       circle: 'mdi-circle-medium',
     },
     settings: {
