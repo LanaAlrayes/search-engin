@@ -19,7 +19,7 @@
         >
           <template #icon>
             <v-avatar
-              size="70"
+              size="80"
             >
               <img :src="require(`../assets/${image.img}`)">
             </v-avatar>
@@ -93,8 +93,8 @@
                 <div class="text--primary">
                   <ul>
                     <li>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iure at dignissimos ad, numquam animi reprehenderit quasi! Corrupti, quibusdam vel? Veritatis adipisci
+                      Syrian Drug Index is a search engine that aims to provide users with comprehensive information about the drugs available in the market and how to use them properly, and to provide information about the producing companies.
+                      The site features many easy-to-use interfaces, with the ability to search for medicines by trade name and search for producing companies with the company's own name.
                     </li>
                   </ul>
                 </div>
@@ -120,25 +120,25 @@ export default {
         img: 'Dr.Mohmmad.jpg',
         section: 'first section',
         title: 'Dr.Mohammad Hajjouz',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.',
-      },
-      {
-        img: 'Lana.jpg',
-        section: 'second section',
-        title: 'Lana Alrayes',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.',
+        description: 'PhD in Mathematical Sciences "Informatics" .Lecturer in the Faculty of Science at Al-Baath University since 2009 for information courses.Lecturer in the Faculty of Information Engineering at Al-Baath University in 2006 for the course of the databases. Lecturer at the Institute of Public Administration since 2015 for the directors of electronic administration and management information systems. Lecturer at the Virtual University of Information Systems Engineering Programs since 2010 to decide databases. Supervisor of MWS Master students since 2012. I also Lecturer in the HND, BSCE, and BL programs for an introduction course to computer science during Previous semester.',
       },
       {
         img: 'Amar.jpg',
-        section: 'Third section',
+        section: 'second section',
         title: 'Ammar Khadaj',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.',
+        description: 'Database developer (bigdata), Database administrator, Data analyst.',
       },
       {
         img: 'Reem.png',
         section: 'Third section',
         title: 'Reem Aboras',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolor atque odio praesentium eaque, architecto culpa! Vel inventore voluptatibus cupiditate ratione, aspernatur corrupti eaque placeat veniam. Quisquam quis praesentium repudiandae.',
+        description: 'Master degree in mathematics specialized in analysis (contact manifold) asistant instructor for 6 years in   AIU civil engineering.',
+      },
+      {
+        img: 'Lana.jpg',
+        section: 'Fourth section',
+        title: 'Lana Alrayes',
+        description: 'I have good experience in front-end design And also average experience in the back-end.',
       },
     ],
   }),
