@@ -1,23 +1,44 @@
-<template>
+<template v-slot:default="{ hover }">
   <v-parallax
     id="home"
     src="https://livedemo00.template-help.com/wt_prod-20844/images/breadcrumbs-bg.jpg"
   >
     <v-container>
-      <v-autocomplete
-        v-model="select"
-        :loading="loading"
-        :items="items"
-        :search-input.sync="search"
-        cache-items
-        class="mx-4"
-        dark
-        hide-no-data
-        hide-details
-        label="Start typing to Search"
-        solo-inverted
-        prepend-inner-icon="mdi-magnify"
-      />
+      <div
+        v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
+        class="justify-center text-center text-h4"
+      >
+        Welcome to Syrian Drug Index!
+      </div>
+
+      <div
+        class="text-center text-h6"
+      >
+        <v-btn
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
+          class="mr-6 mt-12 rounded-lg"
+          tile
+          color="#2a93c9"
+          :to="{name: 'SearchCompany'}"
+        >
+          <v-icon left>
+            mdi-magnify
+          </v-icon>
+          Find your information about company
+        </v-btn>
+        <v-btn
+          v-vue-aos="{animationClass:'animate__animated animate__fadeInDown'}"
+          class="mt-12 rounded-lg"
+          tile
+          color="#2a93c9"
+          :to="{name: 'SearchMedicine'}"
+        >
+          <v-icon left>
+            mdi-magnify
+          </v-icon>
+          Find your medicine
+        </v-btn>
+      </div>
     </v-container>
   </v-parallax>
 </template>
@@ -26,91 +47,24 @@
 export default {
   name: 'HelloWorld',
   data () {
-    return {
-      loading: false,
-      items: [],
-      search: null,
-      select: null,
-      states: [
-        'Alabama',
-        'Alaska',
-        'American Samoa',
-        'Arizona',
-        'Arkansas',
-        'California',
-        'Colorado',
-        'Connecticut',
-        'Delaware',
-        'District of Columbia',
-        'Federated States of Micronesia',
-        'Florida',
-        'Georgia',
-        'Guam',
-        'Hawaii',
-        'Idaho',
-        'Illinois',
-        'Indiana',
-        'Iowa',
-        'Kansas',
-        'Kentucky',
-        'Louisiana',
-        'Maine',
-        'Marshall Islands',
-        'Maryland',
-        'Massachusetts',
-        'Michigan',
-        'Minnesota',
-        'Mississippi',
-        'Missouri',
-        'Montana',
-        'Nebraska',
-        'Nevada',
-        'New Hampshire',
-        'New Jersey',
-        'New Mexico',
-        'New York',
-        'North Carolina',
-        'North Dakota',
-        'Northern Mariana Islands',
-        'Ohio',
-        'Oklahoma',
-        'Oregon',
-        'Palau',
-        'Pennsylvania',
-        'Puerto Rico',
-        'Rhode Island',
-        'South Carolina',
-        'South Dakota',
-        'Tennessee',
-        'Texas',
-        'Utah',
-        'Vermont',
-        'Virgin Island',
-        'Virginia',
-        'Washington',
-        'West Virginia',
-        'Wisconsin',
-        'Wyoming',
-      ],
-    }
+    return {}
   },
-  watch: {
-    search (val) {
-      val && val !== this.select && this.querySelections(val)
-    },
-  },
-  methods: {
-    querySelections (v) {
-      this.loading = true
-      // Simulated ajax query
-      setTimeout(() => {
-        this.items = this.states.filter(e => {
-          return (e || '').toLowerCase().indexOf((v || '').toLowerCase()) > -1
-        })
-        this.loading = false
-      }, 500)
-    },
-  },
-  overlay: false,
 }
 </script>
+<style scoped>
+.myfirst {
+  width: 50px;
+  height: 50px;
+  color: white;
+  position: relative;
+  animation: myfirst 8s linear 1s infinite alternate;
+}
+
+@keyframes myfirst {
+    0%    {left:0px; top:0px;}
+    25%   {left:0px; top:50px;}
+    50%   {left:0px; top:0px;}
+    100%  {left:0px; top:50px;}
+
+  }
+</style>
