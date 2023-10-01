@@ -121,11 +121,31 @@ export default {
         src: 'https://ld-wt73.template-help.com/wt_prod-20176/images/background-breadcrumbs-01-1920x345.jpg',
       },
     ],
-    companies: [],
+    companies: [
+      {
+        name: 'Ultra Medica',
+        summary: 'UNIPHARMA operates by balanced system among administration, production, marketing and promotion by applying electronic communication systems and computer programs in most of its activities and trying to develop such systems constantly.',
+        email: 'info@ultra-medica.org',
+        website: 'Syria - Sydnaya',
+      },
+      {
+        name: 'Maatouk Pharma',
+        summary: 'Maatouk Pharma plant: registered in 12/2005 and built with the heighst international standards with cooperation of GSK, manufuctures Augmentin products under license from GSK',
+        email: 'info@maatoukpharma.com',
+        website: 'Syria - Damascus',
+      },
+      {
+        name: 'Unipharma',
+        summary: 'UNIPHARMA operates by balanced system among administration, production, marketing and promotion by applying electronic communication systems and computer programs in most of its activities and trying to develop such systems constantly.',
+        email: 'info@unipharma-sy.com',
+        website: 'Syria - Damascus',
+      },
+    ],
     icons: {
       email: 'mdi-email',
       home: 'mdi-home',
     },
+
   }),
   mounted () {
     const self = this
